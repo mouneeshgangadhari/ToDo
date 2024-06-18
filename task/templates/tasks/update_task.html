@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <style>
+        label{
+            color: brown;
+            border: 5px;
+        }
+        .container {
+            max-width: 600px;
+            background-color: lightsteelblue;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 50px;
+        }
+        h3 {
+            text-align: center;
+            color: black;
+            margin-bottom: 20px;
+        }
+        form {
+            border: 2px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            background: bisque;
+        }
+        input[type="submit"] {
+            background-color: #00e5ff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Update Task</h3>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Update Task">
+        </form>
+    </div>
+</body>
+</html>
